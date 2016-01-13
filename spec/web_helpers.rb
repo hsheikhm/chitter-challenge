@@ -5,7 +5,7 @@ def valid_sign_up
   fill_in :username, with: 'DWright'
   fill_in :password, with: 'letmein'
   fill_in :password_confirmation, with: 'letmein'
-  click_button 'Submit'
+  click_button 'Sign Up for Chitter'
 end
 
 def sign_up_with_same_username
@@ -15,7 +15,7 @@ def sign_up_with_same_username
   fill_in :username, with: 'DWright'
   fill_in :password, with: 'letmein'
   fill_in :password_confirmation, with: 'letmein'
-  click_button 'Submit'
+  click_button 'Sign Up for Chitter'
 end
 
 def sign_up_without_name
@@ -25,7 +25,7 @@ def sign_up_without_name
   fill_in :username, with: 'DWright1'
   fill_in :password, with: 'letmein'
   fill_in :password_confirmation, with: 'letmein'
-  click_button 'Submit'
+  click_button 'Sign Up for Chitter'
 end
 
 def sign_up_without_email
@@ -35,7 +35,7 @@ def sign_up_without_email
   fill_in :username, with: 'DWright12'
   fill_in :password, with: 'letmein'
   fill_in :password_confirmation, with: 'letmein'
-  click_button 'Submit'
+  click_button 'Sign Up for Chitter'
 end
 
 def sign_up_without_username
@@ -45,7 +45,7 @@ def sign_up_without_username
   fill_in :username, with: ''
   fill_in :password, with: 'letmein'
   fill_in :password_confirmation, with: 'letmein'
-  click_button 'Submit'
+  click_button 'Sign Up for Chitter'
 end
 
 def sign_up_without_password
@@ -55,7 +55,7 @@ def sign_up_without_password
   fill_in :username, with: 'DWright123'
   fill_in :password, with: ''
   fill_in :password_confirmation, with: 'letmein'
-  click_button 'Submit'
+  click_button 'Sign Up for Chitter'
 end
 
 def sign_up_without_password_confirmation
@@ -65,7 +65,7 @@ def sign_up_without_password_confirmation
   fill_in :username, with: 'DWright1234'
   fill_in :password, with: 'letmein'
   fill_in :password_confirmation, with: ''
-  click_button 'Submit'
+  click_button 'Sign Up for Chitter'
 end
 
 def sign_up_without_passwords_matching
@@ -75,14 +75,14 @@ def sign_up_without_passwords_matching
   fill_in :username, with: 'DWright12345'
   fill_in :password, with: 'letmein'
   fill_in :password_confirmation, with: 'letmein1'
-  click_button 'Submit'
+  click_button 'Sign Up for Chitter'
 end
 
 def login(username:, password:)
   visit '/login'
   fill_in :username, with: username
   fill_in :password, with: password
-  click_button 'Login'
+  click_button 'Log Me In'
 end
 
 def post_a_peep_1
