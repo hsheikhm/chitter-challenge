@@ -104,3 +104,21 @@ One reason why I really like Sinatra is that you can benefit from using its **la
 ***User can post a peep and view all peeps:***
 
 ![Home Page](https://github.com/hsheikhm/Github-Images/blob/master/chitter-challenge/home.png)
+
+## Demo App
+
+Visit the link below to see a live version of the app.
+
+https://welcome-to-chitter.herokuapp.com/signup
+
+## Download Instructions
+
+Follow the below instructions on your terminal to download the app:
+
+```
+$ git clone https://github.com/hsheikhm/chitter-challenge.git
+$ cd chitter-challenge
+$ bundle
+$ rackup
+
+```
