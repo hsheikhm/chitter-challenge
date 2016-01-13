@@ -29,9 +29,13 @@
               </div>
               <button type="submit" class="btn btn-default btn-sm">Submit</button>
             </form>
-            <a href="/signup"><button type="button" class="btn btn-danger btn-sm navbar-btn">Sign Up</button></a>
-            <a href="/login"><button type="button" class="btn btn-danger btn-sm navbar-btn">Login</button></a>
-            <a href="/home"><button type="button" class="btn btn-danger btn-sm navbar-btn">Peeps</button></a>
+            <% if !current_maker %>
+              <a href="/signup"><button type="button" class="btn btn-danger btn-sm navbar-btn">Sign Up</button></a>
+              <a href="/login"><button type="button" class="btn btn-danger btn-sm navbar-btn">Login</button></a>
+            <% end %>
+            <% if current_maker %>
+              <a href="/home"><button type="button" class="btn btn-danger btn-sm navbar-btn">Peeps</button></a>
+            <% end %>
             <form class="navbar-form navbar-right" action="/sessions" method="post">
               <div class="form-group">
                 <input type="hidden" class="form-control" name="_method" value="delete">
@@ -52,7 +56,6 @@
       <br>
       <br>
       <br>
-      <div id='notice'><%= flash[:logout] if flash[:logout] %></div>
 
       <%= flash[:login_error] if flash[:login_error] %>
 

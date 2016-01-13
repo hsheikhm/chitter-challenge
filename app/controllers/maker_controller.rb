@@ -45,7 +45,6 @@ module Routes
 
     delete '/sessions' do
       session[:maker_id] = nil
-      flash.keep[:logout] = "See you soon!"
       redirect to '/login'
     end
 
