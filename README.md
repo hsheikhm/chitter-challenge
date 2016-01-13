@@ -38,7 +38,7 @@ As a maker
 So that I can better appreciate the context of a peep
 I want to see the time at which it was made
 ```
-## My Approach
+## My Approach 
 
 Besides creating a **Minimum Viable Product (MVP)** I decided that the main goal of this project was to achieve a **Separation of Concerns**. This therefore meant keeping the **business logic** separate from the **User Interface (UI)**. My approach was to therefore work on the logic first and then once all the logic was in place and all the tests were passing (via **RSpec**) I would work on the layout of the website.
 
