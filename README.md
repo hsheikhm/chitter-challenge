@@ -52,3 +52,41 @@ In previous projects I had usually created a single controller to manage all the
 I had created the app in **Ruby** and also adopted the **Sinatra** framework since they go really well together. As for storing the users and peeps, this was achieved by using **DataMapper** and **PostGresQL**. I had also used the '**Bcrypt**' gem to encrypt passwords.
 
 One reason why I really like Sinatra is that you can benefit from using its **layout** template for styling the app. I therefore used a layout file to style the common features of the app and further created separate views for login, sign up and home etc. I had adopted **HTML**, **CSS** and **Bootstrap** to style the app.
+
+## Directory Structure
+
+```
+├── app/
+│   ├── controllers/
+│   │   ├── base_controller.rb
+│   │   ├── maker_controller.rb
+│   │   └── peep_controller.rb
+│   │
+│   ├── models/
+│   │   ├── maker.rb
+│   │   └── peep.rb
+│   │
+│   ├── public/
+│   │   ├── css/
+│   │   ├── fonts/
+│   │   ├── images/
+│   │   └── js/
+│   │
+│   ├── views/
+│   │   ├── maker/
+│   │   │   ├── home.erb
+│   │   │   ├── login.erb
+│   │   │   └── signup.erb
+│   │   └── layout.erb
+│   │
+│   ├── app.rb
+│   └── data_mappper_setup.rb
+│
+├── spec/
+│   │── features/
+│   ├── models/
+│   ├── spec_helper.rb
+│   └── web_helpers.rb
+│
+
+```
