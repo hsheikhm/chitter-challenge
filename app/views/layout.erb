@@ -36,7 +36,9 @@
               <div class="form-group">
                 <input type="hidden" class="form-control" name="_method" value="delete">
               </div>
+              <% if current_maker %>
               <button type="submit" class="btn btn-danger btn-sm">Logout</button>
+              <% end %>
             </form>
             <% if current_maker %>
               <p class="navbar-text navbar-right"><span class="glyphicon glyphicon-user"></span> Welcome, <%=current_maker.name%></p>
