@@ -65,17 +65,20 @@
         </ul>
       <% end %>
 
-        <ul id='peeps'>
-          <% if @peeps %>
-          <h3>List of Peeps:</h3>
-            <% @peeps.sort_by{ |peep| peep.time }.reverse.each do |peep| %>
-          <li>
-             <p><%=peep.maker.username%> <em><%=format_time(peep.time)%></em></p>
-             <p><%= peep.peep %> </p>
-          </li>
+        <div class="col-md-4 col-md-offset-5 peeps">
+          <ul id='peeps'>
+            <% if @peeps %>
+            <h3 id="peeps-header">List of Peeps:</h3>
+              <% @peeps.sort_by{ |peep| peep.time }.reverse.each do |peep| %>
+            <li class="peep-single">
+               <p id="peep-author"><strong><%=peep.maker.username%></strong> <em><%=format_time(peep.time)%></em></p>
+               <p id="peep"><%= peep.peep %> </p>
+            </li>
+              <% end %>
             <% end %>
-          <% end %>
-        </ul>
+          </ul>
+        </div>
+
       <%= yield %>
     </main>
 

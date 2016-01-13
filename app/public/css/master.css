@@ -45,5 +45,28 @@ footer > a:visited {
 }
 
 .form-group {
-    margin-bottom: 6px !important;
+  margin-bottom: 6px !important;
+}
+
+.peeps {
+  background-color: #FFFAFA;
+  height: 471px;
+  overflow: auto;
+  margin-top: 20px;
+}
+
+.peep-single {
+  padding-bottom: 8px;
+}
+
+#peeps-header {
+  color: red;
+}
+
+#peep-author {
+  margin-bottom: 1px;
+}
+
+#peep {
+  color: red;
 }
