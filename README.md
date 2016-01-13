@@ -90,3 +90,17 @@ One reason why I really like Sinatra is that you can benefit from using its **la
 │
 
 ```
+
+## App Usage and Features
+
+***New user can sign up to Chitter:***
+
+![Sign Up Page](https://github.com/hsheikhm/Github-Images/blob/master/chitter-challenge/signup.png)
+
+***Existing user can login to Chitter:***
+
+![Login Page](https://github.com/hsheikhm/Github-Images/blob/master/chitter-challenge/login.png)
+
+***User can post a peep and view all peeps:***
+
+![Home Page](https://github.com/hsheikhm/Github-Images/blob/master/chitter-challenge/home.png)
