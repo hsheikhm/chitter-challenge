@@ -1,25 +1,19 @@
-Chitter Challenge
-=================
+# Chitter Challenge
 
-* Challenge time: The weekend and up to 9am Monday morning
-* Feel free to use google, your notes, books, etc but work on your own
-* You must submit a pull request to this repo with your code by 9am Monday morning
-* Please feel free to submit pull requests early at any time during the weekend to get automated feedback from Hound and test coverage stats from Coveralls
+* [Task](#task)
+* [My Approach](#my-approach)
+* [Directory Structure](#directory-structure)
+* [App Usage and Features](#app-usage-and-features)
+* [Demo App](#demo-app)
+* [Download Instructions](#download-instructions)
 
-Challenge:
--------
+## Task
 
-As usual please start by 
+Build a Twitter clone that will allow users to post messages to a public stream.
 
-* Filling out your learning plan self review for the week: https://github.com/makersacademy/learning_plan_september2015 (if you haven't already)
-* Forking this repo
+#### User Stories:
 
-We are going to write a little Twitter clone that will allow the users to post messages to a public stream.
-
-Features:
--------
-
-```sh
+```
 As a Maker
 So that I can post messages on Chitter as me
 I want to sign up for Chitter
@@ -44,50 +38,17 @@ As a maker
 So that I can better appreciate the context of a peep
 I want to see the time at which it was made
 ```
+## My Approach
 
-Notes on functionality:
-------
+Besides creating a **Minimum Viable Product (MVP)** I decided that the main goal of this project was to achieve a **Separation of Concerns**. This therefore meant keeping the **business logic** separate from the **User Interface (UI)**. My approach was to therefore work on the logic first and then once all the logic was in place and all the tests were passing (via **RSpec**) I would work on the layout of the website.
 
-* Drive the creation of your app using tests - either cucumber or rspec as you prefer
-* Makers sign up to chitter with their email, password, name and a user name (e.g. sam@makersacademy.com, s3cr3t, Samuel Russell Hampden Joseph, tansaku).
-* The username and email are unique.
-* Peeps (posts to chitter) have the name of the maker and their user handle.
-* Use bcrypt to secure the passwords.
-* Use data mapper and postgres to save the data.
-* You don't have to be logged in to see the peeps.
-* You only can peep if you are logged in.
-* Please ensure that you update your README to indicate the technologies used, and give instructions on how to install and run the tests
-* Finally submit a pull request before Monday at 9am with your solution or partial solution.  However much or little amount of code you wrote please please please submit a pull request before Monday at 9am
+In previous projects I had usually created a single controller to manage all the logic but for this one I decided to create several controllers (listed below) so that my code could be even further separated. The benefits of this are that each controller would have one **single responsibility** and furthermore it would be easier to make a change to any controller.
 
-Bonus:
------
+* [Base controller](https://github.com/hsheikhm/chitter-challenge/blob/master/app/controllers/base_controller.rb) (Responsible for app configuration and helper methods).
+* [Maker Controller](https://github.com/hsheikhm/chitter-challenge/blob/master/app/controllers/maker_controller.rb) (Responsible for login, sign up and logout features).
+* [Peep Controller](https://github.com/hsheikhm/chitter-challenge/blob/master/app/controllers/peep_controller.rb) (Responsible for creating a new peep/message).
 
-If you have time you can implement the following:
 
-* In order to start a conversation as a maker I want to reply to a peep from another maker.
+I had created the app in **Ruby** and also adopted the **Sinatra** framework since they go really well together. As for storing the users and peeps, this was achieved by using **DataMapper** and **PostGresQL**. I had also used the '**Bcrypt**' gem to encrypt passwords.
 
-And/Or:
-
-* Work on the css to make it look good (we all like beautiful things).
-
-Good luck and let the chitter begin!
-
-Notes on test coverage
-----------------------
-
-Please ensure you have the following **AT THE TOP** of your spec_helper.rb in order to have test coverage stats generated
-on your pull request:
-
-```ruby
-require 'coveralls'
-require 'simplecov'
-
-SimpleCov.formatters = [
-  SimpleCov::Formatter::HTMLFormatter,
-  Coveralls::SimpleCov::Formatter
-]
-Coveralls.wear! 
-```
-
-Note that you can replace `Coveralls.wear!` with  `SimpleCov.start` to get coverage stats locally
-Then run `open coverage/index.html` from the command line to view details
+One reason why I really like Sinatra is that you can benefit from using its **layout** template for styling the app. I therefore used a layout file to style the common features of the app and further created separate views for login, sign up and home etc. I had adopted **HTML**, **CSS** and **Bootstrap** to style the app.
