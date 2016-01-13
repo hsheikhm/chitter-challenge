@@ -44,7 +44,7 @@ Besides creating a **Minimum Viable Product (MVP)** I decided that the main goal
 
 In previous projects I had usually created a single controller to manage all the logic but for this one I decided to create several controllers (listed below) so that my code could be even further separated. The benefits of this are that each controller would have one **single responsibility** and furthermore it would be easier to make a change to any controller.
 
-* [Base controller](https://github.com/hsheikhm/chitter-challenge/blob/master/app/controllers/base_controller.rb) (Responsible for app configuration and helper methods).
+* [Base Controller](https://github.com/hsheikhm/chitter-challenge/blob/master/app/controllers/base_controller.rb) (Responsible for app configuration and helper methods).
 * [Maker Controller](https://github.com/hsheikhm/chitter-challenge/blob/master/app/controllers/maker_controller.rb) (Responsible for login, sign up and logout features).
 * [Peep Controller](https://github.com/hsheikhm/chitter-challenge/blob/master/app/controllers/peep_controller.rb) (Responsible for creating a new peep/message).
 
