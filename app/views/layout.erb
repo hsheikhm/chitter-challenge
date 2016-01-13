@@ -65,7 +65,8 @@
         </ul>
       <% end %>
 
-        <div class="col-md-4 col-md-offset-5 peeps">
+      <% if current_maker %>
+        <div class="col-md-4 col-md-offset-2 peeps">
           <ul id='peeps'>
             <% if @peeps %>
             <h3 id="peeps-header">List of Peeps:</h3>
@@ -78,6 +79,7 @@
             <% end %>
           </ul>
         </div>
+      <% end %>
 
       <%= yield %>
     </main>

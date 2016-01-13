@@ -53,10 +53,20 @@ footer > a:visited {
   height: 471px;
   overflow: auto;
   margin-top: 20px;
+  border-radius: 5px;
 }
 
 .peep-single {
   padding-bottom: 8px;
+}
+
+.new-peep {
+  background-color: #FFFAFA;
+  width: 400px !important;
+  margin-top: 20px;
+  padding-bottom: 12px;
+  margin-left: 40px !important;
+  border-radius: 5px;
 }
 
 #peeps-header {
