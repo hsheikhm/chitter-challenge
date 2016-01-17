@@ -120,5 +120,4 @@ $ git clone https://github.com/hsheikhm/chitter-challenge.git
 $ cd chitter-challenge
 $ bundle
 $ rackup
-
 ```
