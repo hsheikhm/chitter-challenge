@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Chitter by hsheikhm</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Chitter</h1>
+      <h2 class="project-tagline">Building a Twitter Clone in Ruby</h2>
+      <a href="https://github.com/hsheikhm/chitter-challenge" class="btn">View on GitHub</a>
+      <a href="https://github.com/hsheikhm/chitter-challenge/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/hsheikhm/chitter-challenge/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="chitter-challenge-" class="anchor" href="#chitter-challenge-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chitter Challenge <a href="https://travis-ci.org/hsheikhm/chitter-challenge"><img src="https://travis-ci.org/hsheikhm/chitter-challenge.svg?branch=master" alt="Build Status"></a>
+</h1>
+
+<ul>
+<li><a href="#task">Task</a></li>
+<li><a href="#my-approach">My Approach</a></li>
+<li><a href="#directory-structure">Directory Structure</a></li>
+<li><a href="#app-usage-and-features">App Usage and Features</a></li>
+<li><a href="#demo-app">Demo App</a></li>
+<li><a href="#download-instructions">Download Instructions</a></li>
+</ul>
+
+<h2>
+<a id="task" class="anchor" href="#task" aria-hidden="true"><span class="octicon octicon-link"></span></a>Task</h2>
+
+<p>Build a Twitter clone that will allow users to post messages to a public stream.</p>
+
+<h4>
+<a id="user-stories" class="anchor" href="#user-stories" aria-hidden="true"><span class="octicon octicon-link"></span></a>User Stories:</h4>
+
+<pre><code>As a Maker
+So that I can post messages on Chitter as me
+I want to sign up for Chitter
+
+As a Maker
+So that I can post messages on Chitter as me
+I want to log in to Chitter
+
+As a Maker
+So that I can avoid others posting messages on Chitter as me
+I want to log out of Chitter
+
+As a Maker
+So that I can let people know what I am doing  
+I want to post a message (peep) to chitter
+
+As a maker
+So that I can see what others are saying  
+I want to see all peeps in reverse chronological order
+
+As a maker
+So that I can better appreciate the context of a peep
+I want to see the time at which it was made
+</code></pre>
+
+<h2>
+<a id="my-approach" class="anchor" href="#my-approach" aria-hidden="true"><span class="octicon octicon-link"></span></a>My Approach</h2>
+
+<p>Besides creating a <strong>Minimum Viable Product (MVP)</strong> I decided that the main goal of this project was to achieve a <strong>Separation of Concerns</strong>. This therefore meant keeping the <strong>business logic</strong> separate from the <strong>User Interface (UI)</strong>. My approach was to therefore work on the logic first and then once all the logic was in place and all the tests were passing (via <strong>RSpec</strong>) I would work on the layout of the website.</p>
+
+<p>In previous projects I had usually created a single controller to manage all the logic but for this one I decided to create several controllers (listed below) so that my code could be even further separated. The benefits of this are that each controller would have one <strong>single responsibility</strong> and furthermore it would be easier to make a change to any controller.</p>
+
+<ul>
+<li>
+<a href="https://github.com/hsheikhm/chitter-challenge/blob/master/app/controllers/base_controller.rb">Base Controller</a> (Responsible for app configuration and helper methods).</li>
+<li>
+<a href="https://github.com/hsheikhm/chitter-challenge/blob/master/app/controllers/maker_controller.rb">Maker Controller</a> (Responsible for login, sign up and logout features).</li>
+<li>
+<a href="https://github.com/hsheikhm/chitter-challenge/blob/master/app/controllers/peep_controller.rb">Peep Controller</a> (Responsible for creating a new peep/message).</li>
+</ul>
+
+<p>I had created the app in <strong>Ruby</strong> and also adopted the <strong>Sinatra</strong> framework since they go really well together. As for storing the users and peeps, this was achieved by using <strong>DataMapper</strong> and <strong>PostGresQL</strong>. I had also used the '<strong>Bcrypt</strong>' gem to encrypt passwords.</p>
+
+<p>One reason why I really like Sinatra is that you can benefit from using its <strong>layout</strong> template for styling the app. I therefore used a layout file to style the common features of the app and further created separate views for login, sign up and home etc. I had adopted <strong>HTML</strong>, <strong>CSS</strong> and <strong>Bootstrap</strong> to style the app.</p>
+
+<h2>
+<a id="directory-structure" class="anchor" href="#directory-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Directory Structure</h2>
+
+<pre><code>├── app/
+│   ├── controllers/
+│   │   ├── base_controller.rb
+│   │   ├── maker_controller.rb
+│   │   └── peep_controller.rb
+│   │
+│   ├── models/
+│   │   ├── maker.rb
+│   │   └── peep.rb
+│   │
+│   ├── public/
+│   │   ├── css/
+│   │   ├── fonts/
+│   │   ├── images/
+│   │   └── js/
+│   │
+│   ├── views/
+│   │   ├── maker/
+│   │   │   ├── home.erb
+│   │   │   ├── login.erb
+│   │   │   └── signup.erb
+│   │   └── layout.erb
+│   │
+│   ├── app.rb
+│   └── data_mappper_setup.rb
+│
+├── spec/
+│   │── features/
+│   ├── models/
+│   ├── spec_helper.rb
+│   └── web_helpers.rb
+│
+
+</code></pre>
+
+<h2>
+<a id="app-usage-and-features" class="anchor" href="#app-usage-and-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>App Usage and Features</h2>
+
+<p><strong><em>New user can sign up to Chitter:</em></strong></p>
+
+<p><img src="https://github.com/hsheikhm/Github-Images/blob/master/chitter-challenge/signup.png" alt="Sign Up Page"></p>
+
+<p><strong><em>Existing user can login to Chitter:</em></strong></p>
+
+<p><img src="https://github.com/hsheikhm/Github-Images/blob/master/chitter-challenge/login.png" alt="Login Page"></p>
+
+<p><strong><em>User can post a peep and view all peeps:</em></strong></p>
+
+<p><img src="https://github.com/hsheikhm/Github-Images/blob/master/chitter-challenge/home.png" alt="Home Page"></p>
+
+<h2>
+<a id="demo-app" class="anchor" href="#demo-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo App</h2>
+
+<p>Visit the link below to see a live version of the app.</p>
+
+<p><a href="https://welcome-to-chitter.herokuapp.com/signup">https://welcome-to-chitter.herokuapp.com/signup</a></p>
+
+<h2>
+<a id="download-instructions" class="anchor" href="#download-instructions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download Instructions</h2>
+
+<p>Follow the below instructions on your terminal to download the app:</p>
+
+<pre><code>$ git clone https://github.com/hsheikhm/chitter-challenge.git
+$ cd chitter-challenge
+$ bundle
+$ rackup
+
+</code></pre>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/hsheikhm/chitter-challenge">Chitter</a> is maintained by <a href="https://github.com/hsheikhm">hsheikhm</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
