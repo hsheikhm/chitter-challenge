@@ -109,7 +109,7 @@ One reason why I really like Sinatra is that you can benefit from using its **la
 
 Visit the link below to see a live version of the app.
 
-https://welcome-to-chitter.herokuapp.com/signup
+[Chitter Web App](https://welcome-to-chitter.herokuapp.com/signup)
 
 ## Download Instructions
 
