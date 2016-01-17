@@ -95,7 +95,8 @@ One reason why I really like Sinatra is that you can benefit from using its **la
 
 ***New user can sign up to Chitter:***
 
-![Sign Up Page](https://github.com/hsheikhm/Github-Images/blob/master/chitter-challenge/signup.png?raw=true)
+![Sign Up Page](https://github.com/hsheikhm/Github-Images/blob/master/chitter-challenge/signup.png)
+<img src="https://github.com/hsheikhm/Github-Images/blob/master/chitter-challenge/signup.png">
 
 ***Existing user can login to Chitter:***
 
