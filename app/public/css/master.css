@@ -91,6 +91,19 @@ footer > a:visited {
   font-size: 14px;
 }
 
+.character-count {
+  width: 174px;
+  margin-left: 79px;
+  margin-top: -25px;
+}
+
+#count {
+  float: right;
+  margin-top: -30px;
+  margin-right: 7px;
+  font-weight: bold; 
+}
+
 #peeps-header {
   color: red;
 }
