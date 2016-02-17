@@ -75,10 +75,13 @@
             <h3 id="peeps-header">List of Peeps:</h3>
               <% @peeps.sort_by{ |peep| peep.time }.reverse.each do |peep| %>
             <li class="peep-single">
-               <p id="peep-author"><strong><%=peep.maker.username%></strong> <em><%=format_time(peep.time)%></em></p>
-               <% if current_maker.username == peep.maker.username %>
-                <a href='#'><span class="glyphicon glyphicon-trash"></span></a>
-               <% end %>
+               <p id="peep-author">
+                 <strong><%=peep.maker.username%></strong>
+                 <em><%=format_time(peep.time)%></em>
+                 <% if current_maker.username == peep.maker.username %>
+                  <a href='#' class="trash-icon"><span class="glyphicon glyphicon-trash"></span></a>
+                 <% end %>
+               </p>
                <p id="peep"><%= peep.peep %> </p>
             </li>
               <% end %>

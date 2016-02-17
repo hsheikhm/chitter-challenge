@@ -81,6 +81,16 @@ footer > a:visited {
   padding-top: 3px;
 }
 
+.trash-icon {
+  color: #d43f3a;
+  font-size: 12px;
+}
+
+.trash-icon:hover {
+  color: #d43f3a;
+  font-size: 14px;
+}
+
 #peeps-header {
   color: red;
 }

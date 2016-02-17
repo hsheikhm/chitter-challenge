@@ -6,7 +6,7 @@
     target = e.target;
 
     if(target.nodeName.toLowerCase() === 'span'){
-      elPeep = target.parentNode.parentNode;
+      elPeep = target.parentNode.parentNode.parentNode;
       elPeepList = elPeep.parentNode;
       elPeepList.removeChild(elPeep);
     }
