@@ -2,9 +2,14 @@
   <div class="col-md-2 col-md-offset-1 new-peep">
     <h3 id="peeps-header">Make a Peep!</h3>
     <form action="/new-peep" method="post">
-      <textarea placeholder="Text..." name="message" cols="50" rows="5"></textarea>
+      <textarea id="peep-text" placeholder="Text..." name="message" cols="50" rows="5"></textarea>
       <br />
       <input type="submit" value="Peep!" class="btn btn-danger btn-sm">
     </form>
+    <div class="character-count">
+      <p>Characters remaining:</p>
+      <p id="count">140</p>
+    </div>
   </div>
+  <script src="/js/home.js"></script>
 <% end %>
