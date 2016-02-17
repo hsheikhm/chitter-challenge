@@ -1,6 +1,6 @@
 (function(){
 
-  function checkUsername() {
+  function checkUsername(e) {
     var elMsg = document.getElementById('username-feedback');
     if (this.value.indexOf('@') > -1) {
       elMsg.removeAttribute('class');
@@ -12,6 +12,6 @@
   }
 
   var elUsername = document.getElementById('username');
-  elUsername.onblur = checkUsername;
+  elUsername.addEventListener('blur', checkUsername, false);
 
 }());

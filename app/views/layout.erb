@@ -76,6 +76,9 @@
               <% @peeps.sort_by{ |peep| peep.time }.reverse.each do |peep| %>
             <li class="peep-single">
                <p id="peep-author"><strong><%=peep.maker.username%></strong> <em><%=format_time(peep.time)%></em></p>
+               <% if current_maker.username == peep.maker.username %>
+                <a href='#'><span class="glyphicon glyphicon-trash"></span></a>
+               <% end %>
                <p id="peep"><%= peep.peep %> </p>
             </li>
               <% end %>
@@ -93,8 +96,9 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="../public/js/bootstrap.min.js"></script>
-    <script src="../public/js/npm.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/npm.js"></script>
+    <script src="/js/layout.js"></script>
   </body>
 
 </html>
