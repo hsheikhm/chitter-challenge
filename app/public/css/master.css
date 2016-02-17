@@ -69,6 +69,18 @@ footer > a:visited {
   border-radius: 5px;
 }
 
+.feedback-div {
+  width: 216px;
+  height: 29px;
+  margin-left: 458px;
+  margin-top: 3px;
+  color: #fff;
+  background-color: #d9534f;
+  border-color: #d43f3a;
+  border-radius: 4px;
+  padding-top: 3px;
+}
+
 #peeps-header {
   color: red;
 }
