@@ -1,5 +1,11 @@
 (function(){
 
+  function setupName() {
+    var fullNameField;
+    fullNameField = document.getElementById('full-name');
+    fullNameField.focus();
+  }
+
   function checkUsername(e) {
     var elMsg = document.getElementById('username-feedback');
     if (this.value.indexOf('@') > -1) {
@@ -13,5 +19,7 @@
 
   var elUsername = document.getElementById('username');
   elUsername.addEventListener('blur', checkUsername, false);
+
+  window.addEventListener('load', setupName, false);
 
 }());
