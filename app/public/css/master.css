@@ -101,7 +101,7 @@ footer > a:visited {
   float: right;
   margin-top: -30px;
   margin-right: 7px;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 #peeps-header {
@@ -114,4 +114,10 @@ footer > a:visited {
 
 #peep {
   color: red;
+}
+
+#peeps-counter {
+  width: 55px;
+  float: right;
+  margin-right: 131px;
 }
