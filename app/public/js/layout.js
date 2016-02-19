@@ -1,5 +1,14 @@
 (function(){
 
+  function updatePeepsCount() {
+
+    var numberOfPeeps, peepCounter;
+
+    peepCounter = document.getElementById('peeps-counter');
+    numberOfPeeps = elPeeps.getElementsByTagName('li').length;
+    peepCounter.textContent = "(" + numberOfPeeps + ")";
+  }
+
   function deletePeep(e) {
 
     var target, elPeep, elPeepList;
@@ -9,11 +18,14 @@
       elPeep = target.parentNode.parentNode.parentNode;
       elPeepList = elPeep.parentNode;
       elPeepList.removeChild(elPeep);
+      updatePeepsCount();
     }
   }
 
-  var el = document.getElementById('peeps');
-  el.addEventListener('click', function(e){
+  window.addEventListener('load', updatePeepsCount, false);
+
+  var elPeeps = document.getElementById('peeps');
+  elPeeps.addEventListener('click', function(e){
     deletePeep(e);
   }, false);
 
