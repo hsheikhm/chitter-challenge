@@ -30,3 +30,19 @@
   }, false);
 
 }());
+
+$(document).ready(function() {
+
+  $('#currentUser').on('mouseover', function() {
+
+    var peepsMadeCount = $('a.trash-icon').length;
+
+    var $showUserPeepsCount = $('<p id="user-peeps-info">No. of peeps made: ' + peepsMadeCount + '<p>');
+    $(this).after($showUserPeepsCount);
+  });
+
+  $('#currentUser').on('mouseout', function() {
+    $('#user-peeps-info').remove();
+  });
+
+});
