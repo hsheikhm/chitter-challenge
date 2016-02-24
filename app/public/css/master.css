@@ -57,7 +57,8 @@ footer > a:visited {
 }
 
 .peep-single {
-  padding-bottom: 8px;
+  padding-top: 5px;
+  border-top: 1px solid #d9534f;
 }
 
 .new-peep {
@@ -84,6 +85,7 @@ footer > a:visited {
 .trash-icon {
   color: #d43f3a;
   font-size: 12px;
+  float: right;
 }
 
 .trash-icon:hover {
@@ -106,6 +108,7 @@ footer > a:visited {
 
 #peeps-header {
   color: red;
+  padding-bottom: 5px;
 }
 
 #peep-author {
@@ -114,6 +117,12 @@ footer > a:visited {
 
 #peep {
   color: red;
+}
+
+#peeps {
+  list-style-type: none;
+  margin-left: -16px;
+  padding-right: 21px;
 }
 
 #peeps-counter {

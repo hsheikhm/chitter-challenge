@@ -29,9 +29,18 @@
   });
 
   $('#peeps-header').hide().fadeIn();
+
   var $li = $('li');
   $li.hide().each(function(index) {
     $(this).delay(200 * index).fadeIn();
+  });
+
+  $('li.peep-single').on('mouseover', function() {
+    $(this).css('background-color', '#FEF1E9');
+  });
+
+  $('li.peep-single').on('mouseout', function() {
+    $(this).css('background-color', '#FFFAFA');
   });
 
   $('.glyphicon-trash').on('click', function() {
