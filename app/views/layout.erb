@@ -35,6 +35,7 @@
             <% end %>
             <% if current_maker %>
               <a href="/home"><button type="button" class="btn btn-danger btn-sm navbar-btn">Peeps</button></a>
+              <a id="hide-peeps-button" href="#"><button type="button" class="btn btn-danger btn-sm navbar-btn">Hide Peeps</button></a>
             <% end %>
             <form class="navbar-form navbar-right" action="/sessions" method="post">
               <div class="form-group">
@@ -70,8 +71,8 @@
       <% end %>
 
       <% if current_maker %>
-        <div class="col-md-4 col-md-offset-2 peeps">
-          <ul id='peeps'>
+        <div id="peeps-container" class="col-md-4 col-md-offset-2 peeps">
+          <ul id="peeps">
             <% if @peeps %>
             <h3 id="peeps-header">List of Peeps <p id="peeps-counter">(0)</p></h3>
               <% @peeps.sort_by{ |peep| peep.time }.reverse.each do |peep| %>

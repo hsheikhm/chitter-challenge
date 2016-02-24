@@ -130,3 +130,8 @@ footer > a:visited {
   color: grey;
   margin-right: 4px;
 }
+
+#show-button {
+  margin-top: 79px;
+  margin-left: 125px;
+}

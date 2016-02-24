@@ -42,4 +42,21 @@
     });
   });
 
+  $('#hide-peeps-button').on('click', function() {
+    var $showPeepsButton = $('<button type="submit" id="show-button" class="btn btn-danger btn-lg">Show Peeps!</button>');
+    $('ul#peeps').fadeOut();
+    $('#peeps-container').animate({
+      height: '-=256'
+    }, 700, function() {
+      $('#peeps').before($showPeepsButton.hide().fadeIn());
+      $('#hide-peeps-button').fadeOut();
+    });
+  });
+
+  $(document).on('click', '#show-button', function() {
+    $(this).fadeOut();
+  });
+
+
+
 }());
