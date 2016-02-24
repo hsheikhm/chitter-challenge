@@ -121,3 +121,12 @@ footer > a:visited {
   float: right;
   margin-right: 131px;
 }
+
+#user-peeps-info {
+  float: right;
+  margin-top: 17px;
+  font-size: 13px;
+  font-style: italic;
+  color: grey;
+  margin-right: 4px;
+}
