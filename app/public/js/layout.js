@@ -73,4 +73,16 @@
     });
   });
 
+  $('#search-text').on('keyup', function() {
+    var input = $(this).val();
+    $('li.peep-single').each(function() {
+      var $this = $(this);
+      if($this.text().search(input) > -1){
+        $this.show();
+      } else {
+        $this.hide();
+      }
+    });
+  });
+
 }());
