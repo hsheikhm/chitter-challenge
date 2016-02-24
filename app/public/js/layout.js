@@ -54,9 +54,14 @@
   });
 
   $(document).on('click', '#show-button', function() {
-    $(this).fadeOut();
+    $(this).fadeToggle();
+    $('#peeps-container').animate({
+      height: '+=256'
+    }, 700, function() {
+      $('ul#peeps').fadeToggle(function() {
+        $('#hide-peeps-button').fadeToggle();
+      });
+    });
   });
-
-
 
 }());
