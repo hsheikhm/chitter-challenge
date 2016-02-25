@@ -101,6 +101,7 @@
 
   $(document).on('click', '.back-to-peeps-button', function() {
     $(this).fadeToggle(100, function() {
+      $(this).remove();
       $('.cloned-peep').animate({
         opacity: 0.0,
         marginTop: '-=120'
