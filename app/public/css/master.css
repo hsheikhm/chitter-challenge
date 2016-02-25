@@ -99,6 +99,19 @@ footer > a:visited {
   margin-top: -25px;
 }
 
+.cloned-peep {
+  background-color: rgb(254, 241, 233);
+  margin: auto;
+  width: 702px;
+  margin-top: 110px;
+  font-size: 32px;
+  list-style-type: none;
+  padding: 23px;
+  border-radius: 10px;
+  text-align: center;
+  border: 3px solid #d9534f;
+}
+
 #count {
   float: right;
   margin-top: -30px;

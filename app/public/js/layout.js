@@ -85,4 +85,14 @@
     });
   });
 
+  $('li.peep-single').on('click', function() {
+    var $clonedPeep = $(this).clone();
+    $clonedPeep.attr('class', 'cloned-peep');
+    $clonedPeep.children().children('a').remove();
+    $('#peeps-container').fadeOut(200);
+    $('.new-peep').fadeOut(200, function() {
+      $('#peeps-container').before($clonedPeep.hide().fadeIn());
+    });
+  });
+
 }());
