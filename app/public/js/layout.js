@@ -12,6 +12,8 @@
   window.addEventListener('load', updatePeepsCount, false);
   var elPeeps = document.getElementById('peeps');
 
+  $('#peep-text').focus();
+
   $('#currentUser').on('mouseover', function() {
     var peepsMadeCount = $('a.trash-icon').length;
     var $showUserPeepsCount = $("<p id='user-peeps-info'>You've made " + peepsMadeCount + ' peeps<p>');
@@ -55,7 +57,7 @@
     var $showPeepsButton = $('<button type="submit" id="show-button" class="btn btn-danger btn-lg">Show Peeps!</button>');
     $('ul#peeps').fadeOut();
     $('#peeps-container').animate({
-      height: '-=256'
+      height: '-=247'
     }, 700, function() {
       $('#peeps').before($showPeepsButton.hide().fadeIn());
       $('#hide-peeps-button').fadeOut();
@@ -65,7 +67,7 @@
   $(document).on('click', '#show-button', function() {
     $(this).fadeToggle();
     $('#peeps-container').animate({
-      height: '+=256'
+      height: '+=247'
     }, 700, function() {
       $('ul#peeps').fadeToggle(function() {
         $('#hide-peeps-button').fadeToggle();
