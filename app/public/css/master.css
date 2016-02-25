@@ -57,14 +57,15 @@ footer > a:visited {
 }
 
 .peep-single {
-  padding-bottom: 8px;
+  padding-top: 5px;
+  border-top: 1px solid #d9534f;
 }
 
 .new-peep {
   background-color: #FFFAFA;
   width: 400px !important;
   margin-top: 20px;
-  padding-bottom: 12px;
+  padding-bottom: 8px;
   margin-left: 40px !important;
   border-radius: 5px;
 }
@@ -84,6 +85,7 @@ footer > a:visited {
 .trash-icon {
   color: #d43f3a;
   font-size: 12px;
+  float: right;
 }
 
 .trash-icon:hover {
@@ -104,8 +106,13 @@ footer > a:visited {
   font-weight: bold;
 }
 
+#peep-text {
+  resize: none;
+}
+
 #peeps-header {
   color: red;
+  padding-bottom: 5px;
 }
 
 #peep-author {
@@ -116,8 +123,31 @@ footer > a:visited {
   color: red;
 }
 
+#peeps {
+  list-style-type: none;
+  margin-left: -16px;
+  padding-right: 21px;
+}
+
 #peeps-counter {
-  width: 55px;
+  margin-left: 154px;
+  margin-top: -27px;
+}
+
+#user-peeps-info {
   float: right;
-  margin-right: 131px;
+  margin-top: 17px;
+  font-size: 13px;
+  font-style: italic;
+  color: grey;
+  margin-right: 4px;
+}
+
+#show-button {
+  margin-top: 84px;
+  margin-left: 125px;
+}
+
+#new-peep-button {
+  margin-top: 8px;
 }
