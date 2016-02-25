@@ -12,8 +12,6 @@
   window.addEventListener('load', updatePeepsCount, false);
   var elPeeps = document.getElementById('peeps');
 
-  $('#peep-text').focus();
-
   $('#currentUser').on('mouseover', function() {
     var peepsMadeCount = $('a.trash-icon').length;
     var $showUserPeepsCount = $("<p id='user-peeps-info'>You've made " + peepsMadeCount + ' peeps<p>');
