@@ -85,13 +85,30 @@
     });
   });
 
-  $('li.peep-single').on('click', function() {
+  $('li.peep-single').on('click', function(e) {
+    if(e.target.nodeName === 'SPAN'){ return; }
+    var $backToAllPeepsButton = $('<div class="back-to-peeps-button"><button type="submit" class="btn btn-danger btn-lg">Back to Peeps</button></div>');
     var $clonedPeep = $(this).clone();
     $clonedPeep.attr('class', 'cloned-peep');
     $clonedPeep.children().children('a').remove();
-    $('#peeps-container').fadeOut(200);
-    $('.new-peep').fadeOut(200, function() {
-      $('#peeps-container').before($clonedPeep.hide().fadeIn());
+    $('#peeps-container').fadeOut(500);
+    $('.new-peep').fadeOut(500, function() {
+      $('#peeps-container').before($clonedPeep.hide().fadeIn(400, function() {
+        $(this).after($backToAllPeepsButton.hide().fadeIn(300));
+      }));
+    });
+  });
+
+  $(document).on('click', '.back-to-peeps-button', function() {
+    $(this).fadeToggle(100, function() {
+      $('.cloned-peep').animate({
+        opacity: 0.0,
+        marginTop: '-=120'
+      }, 500, function() {
+        $(this).remove();
+        $('#peeps-container').fadeToggle(800);
+        $('.new-peep').fadeToggle(800);
+      });
     });
   });
 
