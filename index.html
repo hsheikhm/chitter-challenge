@@ -20,25 +20,26 @@
 
     <section class="main-content">
       <h1>
-<a id="chitter-challenge-" class="anchor" href="#chitter-challenge-" aria-hidden="true"><span class="octicon octicon-link"></span></a>Chitter Challenge <a href="https://travis-ci.org/hsheikhm/chitter-challenge"><img src="https://travis-ci.org/hsheikhm/chitter-challenge.svg?branch=master" alt="Build Status"></a>
+<a id="chitter-challenge-" class="anchor" href="#chitter-challenge-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Chitter Challenge <a href="https://travis-ci.org/hsheikhm/chitter-challenge"><img src="https://travis-ci.org/hsheikhm/chitter-challenge.svg?branch=master" alt="Build Status"></a>
 </h1>
 
 <ul>
 <li><a href="#task">Task</a></li>
 <li><a href="#my-approach">My Approach</a></li>
 <li><a href="#directory-structure">Directory Structure</a></li>
-<li><a href="#app-usage-and-features">App Usage and Features</a></li>
+<li><a href="#app-main-usage-and-features">App Main Usage and Features</a></li>
+<li><a href="#jquery-features">jQuery Features</a></li>
 <li><a href="#demo-app">Demo App</a></li>
 <li><a href="#download-instructions">Download Instructions</a></li>
 </ul>
 
 <h2>
-<a id="task" class="anchor" href="#task" aria-hidden="true"><span class="octicon octicon-link"></span></a>Task</h2>
+<a id="task" class="anchor" href="#task" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Task</h2>
 
 <p>Build a Twitter clone that will allow users to post messages to a public stream.</p>
 
 <h4>
-<a id="user-stories" class="anchor" href="#user-stories" aria-hidden="true"><span class="octicon octicon-link"></span></a>User Stories:</h4>
+<a id="user-stories" class="anchor" href="#user-stories" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>User Stories:</h4>
 
 <pre><code>As a Maker
 So that I can post messages on Chitter as me
@@ -66,7 +67,7 @@ I want to see the time at which it was made
 </code></pre>
 
 <h2>
-<a id="my-approach" class="anchor" href="#my-approach" aria-hidden="true"><span class="octicon octicon-link"></span></a>My Approach</h2>
+<a id="my-approach" class="anchor" href="#my-approach" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>My Approach</h2>
 
 <p>Besides creating a <strong>Minimum Viable Product (MVP)</strong> I decided that the main goal of this project was to achieve a <strong>Separation of Concerns</strong>. This therefore meant keeping the <strong>business logic</strong> separate from the <strong>User Interface (UI)</strong>. My approach was to therefore work on the logic first and then once all the logic was in place and all the tests were passing (via <strong>RSpec</strong>) I would work on the layout of the website.</p>
 
@@ -83,10 +84,10 @@ I want to see the time at which it was made
 
 <p>I had created the app in <strong>Ruby</strong> and also adopted the <strong>Sinatra</strong> framework since they go really well together. As for storing the users and peeps, this was achieved by using <strong>DataMapper</strong> and <strong>PostGresQL</strong>. I had also used the '<strong>Bcrypt</strong>' gem to encrypt passwords.</p>
 
-<p>One reason why I really like Sinatra is that you can benefit from using its <strong>layout</strong> template for styling the app. I therefore used a layout file to style the common features of the app and further created separate views for login, sign up and home etc. I had adopted <strong>HTML</strong>, <strong>CSS</strong> and <strong>Bootstrap</strong> to style the app.</p>
+<p>One reason why I really like Sinatra is that you can benefit from using its <strong>layout</strong> template for styling the app. I therefore used a layout file to style the common features of the app and further created separate views for login, sign up and home etc. I had adopted <strong>HTML</strong>, <strong>CSS</strong> and <strong>Bootstrap</strong> to style the app. Lastly, I had used some <a href="https://github.com/hsheikhm/chitter-challenge/blob/master/app/public/js/layout.js">jQuery</a> in order to enhance the user experience.</p>
 
 <h2>
-<a id="directory-structure" class="anchor" href="#directory-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Directory Structure</h2>
+<a id="directory-structure" class="anchor" href="#directory-structure" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Directory Structure</h2>
 
 <pre><code>├── app/
 │   ├── controllers/
@@ -124,19 +125,24 @@ I want to see the time at which it was made
 </code></pre>
 
 <h2>
-<a id="app-usage-and-features" class="anchor" href="#app-usage-and-features" aria-hidden="true"><span class="octicon octicon-link"></span></a>App Usage and Features</h2>
+<a id="app-main-usage-and-features" class="anchor" href="#app-main-usage-and-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>App Main Usage and Features</h2>
 
-<p>Snapshots of the app's features can be found on <a href="https://github.com/hsheikhm/chitter-challenge#app-usage-and-features">GitHub</a></p>
+<p>Snapshots of the app's features can be found on <a href="https://github.com/hsheikhm/chitter-challenge#app-main-usage-and-features">GitHub</a></p>
 
 <h2>
-<a id="demo-app" class="anchor" href="#demo-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo App</h2>
+<a id="jquery-features" class="anchor" href="#jquery-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>jQuery Features</h2>
+
+<p>Snapshots of the app's jQuery features can be found on <a href="https://github.com/hsheikhm/chitter-challenge#jquery-features">GitHub</a></p>
+
+<h2>
+<a id="demo-app" class="anchor" href="#demo-app" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Demo App</h2>
 
 <p>Visit the link below to see a live version of the app.</p>
 
 <p><a href="https://welcome-to-chitter.herokuapp.com/signup">Chitter Web App</a></p>
 
 <h2>
-<a id="download-instructions" class="anchor" href="#download-instructions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Download Instructions</h2>
+<a id="download-instructions" class="anchor" href="#download-instructions" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Download Instructions</h2>
 
 <p>Follow the below instructions on your terminal to download the app:</p>
 
