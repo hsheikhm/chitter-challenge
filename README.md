@@ -4,6 +4,7 @@
 * [My Approach](#my-approach)
 * [Directory Structure](#directory-structure)
 * [App Main Usage and Features](#app-main-usage-and-features)
+* [jQuery Features](#jquery-features)
 * [Demo App](#demo-app)
 * [Download Instructions](#download-instructions)
 
@@ -109,19 +110,27 @@ One reason why I really like Sinatra is that you can benefit from using its **la
 
 ***User can view a peep close up:***
 
+![View Peep Close Up](https://github.com/hsheikhm/Github-Images/blob/master/chitter-challenge/close-up-peep.png)
+
 ***User can delete their own peep:***
+
+![Delete Peep](https://github.com/hsheikhm/Github-Images/blob/master/chitter-challenge/delete-peep.png)
 
 ***User can choose to hide all peeps:***
 
+![Hide Peeps](https://github.com/hsheikhm/Github-Images/blob/master/chitter-challenge/hide-peeps.png)
+
 ***User can search for a peep:***
+
+![Search Peeps](https://github.com/hsheikhm/Github-Images/blob/master/chitter-challenge/search-peeps.png)
 
 ***User can see how many characters they have left to use:***
 
+![Characters Count](https://github.com/hsheikhm/Github-Images/blob/master/chitter-challenge/characters-remaining.png)
+
 ***User can see how many peeps they have posted in total:***
 
-
-
-
+![Total Peeps Count](https://github.com/hsheikhm/Github-Images/blob/master/chitter-challenge/peeps-posted-count.png)
 
 ## Demo App
 
