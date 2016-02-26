@@ -14,7 +14,7 @@
 
   $('#currentUser').on('mouseover', function() {
     var peepsMadeCount = $('a.trash-icon').length;
-    var $showUserPeepsCount = $("<p id='user-peeps-info'>You've made " + peepsMadeCount + ' peeps<p>');
+    var $showUserPeepsCount = $("<p id='user-peeps-info'>You've posted " + peepsMadeCount + ' peeps<p>');
     $('.container-fluid').css('height', '0px');
     $(this).after($showUserPeepsCount.hide().fadeIn());
   });

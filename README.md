@@ -3,7 +3,7 @@
 * [Task](#task)
 * [My Approach](#my-approach)
 * [Directory Structure](#directory-structure)
-* [App Usage and Features](#app-usage-and-features)
+* [App Main Usage and Features](#app-main-usage-and-features)
 * [Demo App](#demo-app)
 * [Download Instructions](#download-instructions)
 
@@ -91,7 +91,7 @@ One reason why I really like Sinatra is that you can benefit from using its **la
 
 ```
 
-## App Usage and Features
+## App Main Usage and Features
 
 ***New user can sign up to Chitter:***
 
@@ -104,6 +104,24 @@ One reason why I really like Sinatra is that you can benefit from using its **la
 ***User can post a peep and view all peeps:***
 
 ![Home Page](https://github.com/hsheikhm/Github-Images/blob/master/chitter-challenge/home.png)
+
+## jQuery Features
+
+***User can view a peep close up:***
+
+***User can delete their own peep:***
+
+***User can choose to hide all peeps:***
+
+***User can search for a peep:***
+
+***User can see how many characters they have left to use:***
+
+***User can see how many peeps they have posted in total:***
+
+
+
+
 
 ## Demo App
 
