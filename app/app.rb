@@ -13,6 +13,10 @@ class ChitterWebApp < Sinatra::Base
   use Routes::MakerController
   use Routes::PeepController
 
+  get '/css/master.css' do
+    sass :'../public/css/sass/master'
+  end
+
   run! if app_file == $PROGRAM_NAME
 
 end

@@ -9,6 +9,7 @@ gem 'data_mapper'
 gem 'dm-postgres-adapter'
 gem 'dm-transactions'
 gem 'time_ago_in_words'
+gem 'sass'
 
 group :test do
   gem 'rspec'

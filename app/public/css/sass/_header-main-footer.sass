@@ -1,0 +1,41 @@
+main
+  flex: 1
+  background-color: #FA807F
+  +background-image
+
+footer
+  height: 28px
+  background-color: $primary-background-color !important
+  margin-top: 14px
+  text-align: center
+  color: $primary-color
+  font-size: 12px
+
+  a
+    color: $primary-color
+    &:hover
+      color: $primary-color
+    &:visited
+      color: $primary-color
+
+.wrapper
+  height: 100vh
+  display: flex
+  flex-direction: column
+
+.container-fluid
+  background-color: $primary-background-color !important
+
+.navbar-brand
+  color: $primary-color !important
+
+.navbar-text
+  @extend .navbar-brand
+
+#user-peeps-info
+  float: right
+  margin-top: 17px
+  font-size: 13px
+  font-style: italic
+  color: gray
+  margin-right: 4px
