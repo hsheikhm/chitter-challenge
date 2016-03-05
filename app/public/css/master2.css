@@ -1,4 +1,4 @@
-main {
+/*main {
   flex:1;
   background-color: #FA807F;
   background-image: url(../images/london-night.jpg);
@@ -13,19 +13,19 @@ footer {
   text-align: center;
   color: red;
   font-size: 12px;
-}
+}*/
 
-footer > a:link {
+/*footer > a:link {
   color: red;
 }
 
 footer > a:visited {
   color: red;
-}
+}*/
 
-.container-fluid {
+/*.container-fluid {
   background-color: #FFFAFA !important;
-}
+}*/
 
 .container {
   padding-right: 15px !important;
@@ -34,15 +34,15 @@ footer > a:visited {
   margin-top: 51px !important;
 }
 
-.navbar-brand, .navbar-text {
+/*.navbar-brand, .navbar-text {
   color: red !important;
-}
+}*/
 
-.wrapper {
+/*.wrapper {
   height:100vh;
   display:flex;
   flex-direction: column;
-}
+}*/
 
 .form-group {
   margin-bottom: 6px !important;
