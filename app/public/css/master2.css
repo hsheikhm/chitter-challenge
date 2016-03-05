@@ -4,7 +4,7 @@ main {
   background-image: url(../images/london-night.jpg);
   background-size: cover;
   background-blend-mode: darken;
-  }
+}
 
 footer {
   height: 28px;
@@ -82,7 +82,7 @@ footer > a:visited {
   color: #fff;
   background-color: #d9534f;
   border-color: #d43f3a;
-  border-radius: 4px;
+  border-radius: 5px;
   padding-top: 3px;
 }
 
