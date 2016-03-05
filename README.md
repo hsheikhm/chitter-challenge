@@ -52,7 +52,7 @@ In previous projects I had usually created a single controller to manage all the
 
 I had created the app in **Ruby** and also adopted the **Sinatra** framework since they go really well together. As for storing the users and peeps, this was achieved by using **DataMapper** and **PostGresQL**. I had also used the '**Bcrypt**' gem to encrypt passwords.
 
-One reason why I really like Sinatra is that you can benefit from using its **layout** template for styling the app. I therefore used a layout file to style the common features of the app and further created separate views for login, sign up and home etc. I had adopted **HTML**, **CSS** and **Bootstrap** to style the app. Lastly, I had used some [jQuery](https://github.com/hsheikhm/chitter-challenge/blob/master/app/public/js/layout.js) in order to enhance the user experience.
+One reason why I really like Sinatra is that you can benefit from using its **layout** template for styling the app. I therefore used a layout file to style the common features of the app and further created separate views for login, sign up and home etc. I had adopted **HTML**, **CSS**, **Sass** and **Bootstrap** to style the app. Lastly, I had used some [jQuery](https://github.com/hsheikhm/chitter-challenge/blob/master/app/public/js/layout.js) in order to enhance the user experience.
 
 ## Directory Structure
 
@@ -69,6 +69,7 @@ One reason why I really like Sinatra is that you can benefit from using its **la
 │   │
 │   ├── public/
 │   │   ├── css/
+│   │   │   └── sass/
 │   │   ├── fonts/
 │   │   ├── images/
 │   │   └── js/
